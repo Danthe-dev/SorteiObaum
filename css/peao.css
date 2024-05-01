@@ -1,0 +1,113 @@
+body {
+    background-color: #202b38;
+  }
+    #wrapper {
+width: 400px;
+height: 400px;
+position: absolute;
+left: 50%;
+top: 50%;
+margin-left: -200px;
+margin-top: -200px;
+}
+
+#piao {
+position: relative;
+top: 40px; /* centraliza o pião */
+margin: 0 auto; /* centraliza o pião */
+height: 330px;
+width: 200px;
+}
+
+#piao .numero {
+position: absolute;
+height: 90%;
+width: 200px;
+-webkit-box-sizing: border-box;
+text-align: center;
+line-height: 320px;
+font-family: Impact, sans-serif;
+font-size: 240px;
+color: white;
+background-color: #222222;
+box-shadow: inset 0px 0px 48px rgb(251 21 21 / 26%);
+}
+
+#moldura {
+height: 0;
+width: 0;
+border: 0 solid rgb(200, 0, 0);
+background-color: rgba(0, 0, 0, 0);
+border-radius: 250px;
+z-index: -1;
+position: absolute;
+top: -45px;
+left: -50px;
+}
+#piao > .numero.um {
+/*
+a rotação deste elemento é 0, o que já é o valor padrão
+então não há necessidade de redeclarar sua rotação
+*/
+}
+
+#piao > .numero.dois {
+-webkit-transform: rotateY(60deg);
+}
+
+#piao > .numero.tres {
+-webkit-transform: rotateY(120deg);
+}
+
+#piao > .numero.quatro {
+-webkit-transform: rotateY(180deg);
+}
+
+#piao > .numero.cinco {
+-webkit-transform: rotateY(240deg);
+}
+
+#piao > .numero.seis {
+-webkit-transform: rotateY(300deg);
+}
+#piao {
+-webkit-transform-style: preserve-3d;
+}
+
+#piao > .numero.um {
+-webkit-transform: translateZ(170px);
+}
+
+#piao > .numero.dois {
+-webkit-transform: rotateY(60deg) translateZ(170px);
+}
+
+#piao > .numero.tres {
+-webkit-transform: rotateY(120deg) translateZ(170px);
+}
+
+#piao > .numero.quatro {
+-webkit-transform: rotateY(180deg) translateZ(170px);
+}
+
+#piao > .numero.cinco {
+-webkit-transform: rotateY(240deg) translateZ(170px);
+}
+
+#piao > .numero.seis {
+-webkit-transform: rotateY(300deg) translateZ(170px);
+}
+
+@-webkit-keyframes rodando {
+from { -webkit-transform: rotateY(0); }
+to   { -webkit-transform: rotateY(-360deg); }
+}
+
+#piao {
+-webkit-animation: rodando 1s infinite linear;
+}
+
+.numero img {
+margin-bottom: 35px;
+width: 140px;
+}

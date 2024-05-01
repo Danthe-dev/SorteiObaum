@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css">
+        <title>SorteiObaum</title>
+    </head>
+    <body>
+        <link rel="stylesheet" href="css/titlebar.css">
+        <div id="title-bar">
+            <div id="title-bar-btns">
+                <button id="min-btn">
+                    <x></x>
+                </button>
+                <button id="max-btn">
+                    <x></x>
+                </button>
+                <button id="close-btn">
+                    <x></x>
+                </button>
+            </div>
+        </div>
+        <iframe src="pages/inicio.html"></iframe>
+        <div id="musica">
+            <button id="speaker-btn"><img id="speaker" src="assets/speaker_on.png"></button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.3">
+        </div>
+        <audio id="backgroundMusic" src="assets/peao.mp3" autoplay loop></audio>
+        <script src="script/titlebar.js"></script>
+        <script src="script/audio.js"></script>
+        <script src="script/play.js"></script>
+    </body>
+</html>

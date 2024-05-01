@@ -1,0 +1,15 @@
+{
+  "name": "SorteiObaum",
+  "version": "3.0.0",
+  "description": "Para sortear nomes na live do Dragão de leite.",
+  "main": "main",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.1"
+  }
+}

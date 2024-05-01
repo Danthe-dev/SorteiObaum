@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/resultado.css">
+        <title>RESULTADO</title>
+    </head>
+    <body>
+        <div id="conteudo">
+            <div id="centro">
+                <h1>Vencedor:</h1>
+                <button id="output"></button>
+            </div>
+            <div id="img">
+                <img src="../assets/obaumpeao.gif" alt="OBAUM">
+                <img src="../assets/obaumpeao.gif" alt="OBAUM">
+                <img src="../assets/obaumpeao.gif" alt="OBAUM">
+                <img src="../assets/obaumpeao.gif" alt="OBAUM">
+            </div>
+            <div id="backButton">
+                <button id="sorte" onclick="location.href='inicio.html'">SORTEAR NOVAMENTE</button>
+            </div>
+            <img id="estrelas1" src="../assets/estrelas.gif" alt="estrelas">
+            <img id="estrelas2" src="../assets/estrelas.gif" alt="estrelas">
+            <audio id="backgroundMusic" src="../assets/cheer.mp3" autoplay></audio>
+        </div>
+        <script src="../script/play.js"></script>
+        <script>
+            document.getElementById('output').innerText = localStorage.getItem('drawnName');
+            
+            if(localStorage.getItem('drawnName')) {
+                document.getElementById('output').innerText = localStorage.getItem('drawnName');
+            } else {
+                document.getElementById('output').innerText = 'ERRO: NENHUM NOME';
+            }
+        </script>
+    </body>
+</html>

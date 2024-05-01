@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<Html>
+<head>
+
+</head>
+<body onload="onLoad()">
+  <link rel="stylesheet" href="../css/peao.css">
+    <div id="wrapper">
+        <div id="piao">
+          <!-- todas as faces do pião -->
+          <div class="numero um"><img src="../assets/1.gif"></div>
+          <div class="numero dois"><img src="../assets/1.gif"></div>
+          <div class="numero tres"><img src="../assets/1.gif"></div>
+          <div class="numero quatro"><img src="../assets/1.gif"></div>
+          <div class="numero cinco"><img src="../assets/1.gif"></div>
+          <div class="numero seis"><img src="../assets/1.gif"></div>
+        </div>
+        <div id="moldura"> </div>
+        <audio id="backgroundMusic" src="../assets/peao.mp3" autoplay loop></audio>
+      </div>
+
+<script>
+  var audio = document.getElementById('backgroundMusic');
+  audio.volume = 0.4;
+  function onLoad() {
+    setTimeout(function() {
+      window.open('resultado.html', '_self');
+    }, 5000);
+  }
+</script>
+</body>
+</Html>
